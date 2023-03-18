@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700"> 
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="../fonts/icomoon/style.css">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
 
-    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="../css/aos.css">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"></script>
     
@@ -28,30 +28,21 @@
     <div id="Header" x-data="{ 
       header: '',
       auth: false,
-      user: true
+      user: false,
+      admin: true
     }" x-init="header = await (await fetch('/header.html')).text()" x-html="header">
     </div>
 
     <div class="bg-light py-3">
       <div class="container">
         <div class="row">
-          <div class="col-md-12 mb-0"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Dashboard</strong></div>
+          <div class="col-md-12 mb-0"><a href="../index.html">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Admin Portal</strong></div>
         </div>
       </div>
     </div>
 
     <div class="site-section">
       <div class="container">
-
-        <div class="row">
-          <div class="col-md-6">
-            <div class="row mb-5">
-              <div class="col-md-6 mb-3 mb-md-0">
-                <button class="btn btn-primary btn-sm btn-block" data-toggle="modal" data-target="#myModal">Add Product</button>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div class="row mb-5">
           <form class="col-md-12" method="post">
@@ -63,27 +54,33 @@
                     <th class="product-name">Product</th>
                     <th class="product-price">Price</th>
                     <th class="product-quantity">Quantity</th>
-                    <th class="product-remove">Remove</th>
+                    <th class="product-remove">Status</th>
                   </tr>
                 </thead>
-                <tbody x-data="{ 
-                    products: [],
-                  }" x-init="products = await (await fetch('/data/products.json')).json()">
+                <tbody>
+                  <tr>
+                    <td class="product-thumbnail">
+                      <img src="images/product3.jpg" alt="Image" class="img-fluid">
+                    </td>
+                    <td class="product-name">
+                      <h2 class="h5 text-black">Cups & Plates</h2>
+                    </td>
+                    <td>72 NOK</td>
+                    <td><strong>4</strong></td>
+                    <td><a href="#" class="btn btn-success btn-sm">Approved</a></td>
+                  </tr>
 
-                  <template x-for="product in products" :key="product.id">
-                    <tr>
-                      <td class="product-thumbnail">
-                        <img :src="product.imageUrl" alt="Image" class="img-fluid">
-                      </td>
-                      <td class="product-name">
-                        <h2 class="h5 text-black" x-text="product.name"></h2>
-                      </td>
-                      <td><span x-text="product.price"></span></td>
-                      <td><span x-text="product.quantity"></span></td>
-                      <td><a href="#" class="btn btn-primary btn-sm">X</a></td>
-                    </tr>
-                  </template>
-                  
+                  <tr>
+                    <td class="product-thumbnail">
+                      <img src="images/product8.jpg" alt="Image" class="img-fluid">
+                    </td>
+                    <td class="product-name">
+                      <h2 class="h5 text-black">New Sneakers</h2>
+                    </td>
+                    <td>49 NOK</td>
+                    <td><strong>2</strong></td>
+                    <td><a href="#" class="btn btn-danger btn-sm">Declined</a></td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -134,15 +131,15 @@
     </div>
   </div>
 
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script src="../js/jquery-ui.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.magnific-popup.min.js"></script>
+  <script src="../js/aos.js"></script>
 
-  <script src="js/main.js"></script>
+  <script src="../js/main.js"></script>
     
   </body>
 </html>

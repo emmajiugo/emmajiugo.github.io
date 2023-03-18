@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Cultery Set",
+        "price": "430 NOK",
+        "seller": "Esther",
+        "quantity": 3,
+        "imageUrl": "images/product2.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Mini Oven",
+        "price": "130 NOK",
+        "seller": "Johnny",
+        "quantity": 1,
+        "imageUrl": "images/product1.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Cups & Plates",
+        "price": "102 NOK",
+        "seller": "Luke",
+        "quantity": 5,
+        "imageUrl": "images/product3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Electric Jug",
+        "price": "115 NOK",
+        "seller": "Simon",
+        "quantity": 3,
+        "imageUrl": "images/product4.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Step by Step Textbook",
+        "price": "130 NOK",
+        "seller": "Johnny",
+        "quantity": 2,
+        "imageUrl": "images/product5.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Plates",
+        "price": "430 NOK",
+        "seller": "Esther",
+        "quantity": 4,
+        "imageUrl": "images/product6.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Electric Blender",
+        "price": "202 NOK",
+        "seller": "Marta",
+        "quantity": 1,
+        "imageUrl": "images/product7.jpg"
+    },
+    {
+        "id": 8,
+        "name": "New Sneakers",
+        "price": "115 NOK",
+        "seller": "Simon",
+        "quantity": 2,
+        "imageUrl": "images/product8.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Mini Fan",
+        "price": "270 NOK",
+        "seller": "Luke",
+        "quantity": 1,
+        "imageUrl": "images/product9.jpg"
+    }
+]

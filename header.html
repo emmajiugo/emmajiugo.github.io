@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row align-items-center">
 
-                <div class="col-12 mb-3 mb-md-0 col-md-6 order-1 order-md-2 text-center">
+                <div class="col-12 mb-3 mb-md-0 order-1 order-md-2 text-center">
                     <div class="site-logo">
                         <a href="index.html" class="js-logo-clone">Student Starter Pack</a>
                     </div>
@@ -13,19 +13,29 @@
         </div>
     </div>
     <nav class="site-navigation text-right text-md-center" role="navigation">
-        <div class="container">
-            <ul class="site-menu js-clone-nav d-none d-md-block">
-                <li class="has-children active">
-                    <a href="index.html">Home</a>
-                    <ul class="dropdown">
-                        <li><a href="team.html">Meet the Team</a></li>
-                    </ul>
-                </li>
-                <li><a href="market.html">Market Place</a></li>
-                <li><a href="rent.html">Rent Store</a></li>
-                <li><a href="login.html">Login/Register</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+        <div class="container row">
+            <div class="col-md-8">
+                <ul class="site-menu js-clone-nav d-none d-md-block">
+                    <li class="has-children">
+                        <a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="team.html">Meet the Team</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="rent.html">Rent Store</a></li>
+                    <li><a href="market.html">Market Place</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="site-menu js-clone-nav d-none d-md-block float-right">
+                    <li x-show="auth"><a class="btn btn-sm btn-primary" style="color:#fff" href="login.html">Login</a></li>
+                    <li x-show="auth"><a class="btn btn-sm btn-primary" style="color:#fff" href="register.html">Register</a></li>
+                    <li x-show="user"><a class="btn btn-secondary" href="user-page.html">My Dashboard</a></li>
+                    <li x-show="user"><a class="btn btn-sm btn-danger" style="color:#fff" href="#">Logout</a></li>
+                    <li x-show="admin"><a class="btn btn-secondary" href="admin-page.html">My Dashboard</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 </header>

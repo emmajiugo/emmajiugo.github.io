@@ -2,22 +2,22 @@
 <html lang="en">
 
 <head>
-    <title>SSP - USN</title>
+    <title>SSP - USN | Admin Login</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700">
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="../fonts/icomoon/style.css">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
 
-    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="../css/aos.css">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"></script>
 
@@ -26,25 +26,28 @@
 <body>
 
     <div class="site-wrap">
-
-        <div id="Header" x-data="{ 
-              header: '',
-              type: 'user'
+        
+        <div class="site-wrap">
+        
+            <div id="Header" x-data="{ 
+                header: '',
+                auth: true,
+                user: false
             }" x-init="header = await (await fetch('/header.html')).text()" x-html="header">
-        </div>
+            </div>
 
         <div class="site-section block-3 site-blocks-2 bg-light">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-7 site-section-heading text-center pt-4">
-                        <h2>Login into your account</h2>
+                        <h2>Admin Login</h2>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 offset-3">
-                        <form class="" action="market.html">
+                        <form class="" action="admin-page.html">
                             <div class="form-group">
-                                <label for="">Email:</label>
+                                <label for="">Username:</label>
                                 <input type="text" class="form-control">
                             </div>
                             <div class="form-group">
@@ -53,9 +56,6 @@
                             </div>
                             <div class="form-group">
                                 <input type="submit" class="btn btn-primary" value="Login">
-                            </div>
-                            <div class="form-group">
-                                <p>Don't have an account? <a href="register.html">Click Here</a></p>
                             </div>
                         </form>
                     </div>
@@ -67,15 +67,15 @@
         </div>
     </div>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+    <script src="../js/aos.js"></script>
 
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 
 </body>
 
