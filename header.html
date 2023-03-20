@@ -14,17 +14,24 @@
     </div>
     <nav class="site-navigation text-right text-md-center" role="navigation">
         <div class="container row">
-            <div class="col-md-8">
+            <div class="col-md-8"
+            x-data="{
+                p: new URLSearchParams(location.search).get('p')
+            }"
+            >
+                <!-- <p>
+                    Param "q" (from URL): "<span x-text="p"></span>"
+                </p> -->
                 <ul class="site-menu js-clone-nav d-none d-md-block">
-                    <li class="has-children">
-                        <a href="index.html">Home</a>
+                    <li class="has-children" :class="p=='home' ? 'active' : ''">
+                        <a href="index.html?p=home">Home</a>
                         <ul class="dropdown">
-                            <li><a href="team.html">Meet the Team</a></li>
+                            <li><a href="team.html?p=home">Meet the Team</a></li>
                         </ul>
                     </li>
-                    <li><a href="rent.html">Rent Store</a></li>
-                    <li><a href="market.html">Market Place</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li :class="p=='rent' ? 'active' : ''"><a href="rent.html?p=rent">Rent Store</a></li>
+                    <li :class="p=='market' ? 'active' : ''"><a href="market.html?p=market">Market Place</a></li>
+                    <li :class="p=='contact' ? 'active' : ''"><a href="contact.html?p=contact">Contact</a></li>
                 </ul>
             </div>
             <div class="col-md-4">

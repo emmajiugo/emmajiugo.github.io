@@ -43,7 +43,16 @@
     <div class="site-section">
       <div class="container" 
       x-data="{
-        data: JSON.parse(new URLSearchParams(location.search).get('q'))
+        data: JSON.parse(new URLSearchParams(location.search).get('q')),
+        p: new URLSearchParams(location.search).get('p'),
+
+        addRent() {
+          return this.p=='rent' ? true : false;
+        },
+
+        contactSeller() {
+          return this.p=='market' ? true : false;
+        }
       }">
         <!-- <p>
           Param "q" (from URL): "<span x-text="data.name"></span>"
@@ -56,8 +65,12 @@
             <h2 class="text-black" x-text="data.name"></h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, vitae, explicabo? Incidunt facere, natus soluta dolores iusto! Molestiae expedita veritatis nesciunt doloremque sint asperiores fuga voluptas, distinctio, aperiam, ratione dolore.</p>
             <p class="mb-4">Ex numquam veritatis debitis minima quo error quam eos dolorum quidem perferendis. Quos repellat dignissimos minus, eveniet nam voluptatibus molestias omnis reiciendis perspiciatis illum hic magni iste, velit aperiam quis.</p>
+
+            <p x-show="contactSeller()">Seller: <strong class="text-primary" x-text="data.seller"></strong></p>
+
             <p><strong class="text-primary h4" x-text="data.price"></strong></p>
-            <div class="mb-5">
+
+            <div x-show="addRent()" class="mb-5">
               <div class="input-group mb-3" style="max-width: 120px;">
               <div class="input-group-prepend">
                 <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
@@ -70,9 +83,9 @@
 
             </div>
             <p>
-              <a href="cart.html" class="buy-now btn btn-sm btn-primary">Add To Cart</a>
+              <a x-show="addRent()" href="cart.html" class="buy-now btn btn-sm btn-primary">Add To Cart</a>
 
-              <a class="buy-now btn btn-dark btn-sm" data-toggle="modal" data-target="#myModal">Message seller</a>
+              <a x-show="contactSeller()" class="buy-now btn btn-dark btn-sm" data-toggle="modal" data-target="#myModal">Message seller</a>
 
               <!-- Modal -->
               <div id="myModal" class="modal fade" role="dialog" style="margin-top: 13%;">
@@ -109,59 +122,6 @@
               </div>
             </p>
 
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="site-section block-3 site-blocks-2 bg-light">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-7 site-section-heading text-center pt-4">
-            <h2>Featured Products</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="nonloop-block-3 owl-carousel">
-              <div class="item">
-                <div class="block-4 text-center">
-                  <figure class="block-4-image">
-                    <img src="images/product3.jpg" alt="Image placeholder" class="img-fluid">
-                  </figure>
-                  <div class="block-4-text p-4">
-                    <h3><a href="#">Cups & Plates</a></h3>
-                    <p class="mb-0">Finding perfect product</p>
-                    <p class="text-primary font-weight-bold">NOK 50</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="block-4 text-center">
-                  <figure class="block-4-image">
-                    <img src="images/product5.jpg" alt="Image placeholder" class="img-fluid">
-                  </figure>
-                  <div class="block-4-text p-4">
-                    <h3><a href="#">Step by Step</a></h3>
-                    <p class="mb-0">Finding perfect product</p>
-                    <p class="text-primary font-weight-bold">NOK 50</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="block-4 text-center">
-                  <figure class="block-4-image">
-                    <img src="images/product7.jpg" alt="Image placeholder" class="img-fluid">
-                  </figure>
-                  <div class="block-4-text p-4">
-                    <h3><a href="#">Electric Blender</a></h3>
-                    <p class="mb-0">Finding perfect product</p>
-                    <p class="text-primary font-weight-bold">NOK 50</p>
-                  </div>
-                </div>
-              </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
